@@ -6,8 +6,10 @@ html {
 
 body {
   min-height: 100%;
-  min-width: 100%;
-  background: linear-gradient(pink, violet);
+  width: 100vw;
+  margin: 0 auto;
+  padding: 0;
+  /* background: linear-gradient(pink, violet); */
 }
 
 button {
@@ -20,18 +22,98 @@ button {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 1px solid #333;
+  /* border: 1px solid #333; */
   background: rgba(255, 255, 255, 0.3);
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+  /* box-shadow: 2px 5px 5px #333; */
+}
+
+form input {
+  margin: 10px 0;
 }
 
 #list {
-  margin: 10px;
-  border: 1px solid #333;
+  margin: 50px auto;
+  /* border: 1px solid #333; */
   background: rgba(255, 255, 255, 0.75);
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
-  box-shadow: 2px 5px 5px #333;
+  min-width: 60vw;
+  /* box-shadow: 2px 5px 5px #333; */
+}
+
+#list .todo-description li {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  cursor: pointer;
+  flex: 1;
+}
+
+#list .todo-description p {
+  margin: 0;
+  font-size: small;
+  color: grey;
+}
+#list .todo-description {
+  flex: 1;
+}
+
+#list .todo-description input {
+  color: grey;
+  width: 80%;
+  border-radius: 5px;
+  font-size: medium;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#list .todo-container {
+  padding: 15px 18px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#list .delete {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1rem;
+  color: crimson;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  padding: 0.2rem;
+  border-radius: 50%;
+}
+#list .edit {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1rem;
+  color: teal;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+#list button:active {
+  background-color: #eee;
+}
+
+#list .list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#list .list-header p i {
+  cursor: pointer;
 }
